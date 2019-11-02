@@ -1,8 +1,12 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-// import { Container } from './styles';
+import { Container } from './styles'
 
 export default function FirstExample() {
-  return <Text>FirstExample</Text>
+  return (
+    <Container>
+      <Text>FirstExample</Text>
+    </Container>
+  )
 }
