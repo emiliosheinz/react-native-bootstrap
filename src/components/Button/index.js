@@ -5,7 +5,7 @@ import { ActivityIndicator } from 'react-native'
 import { ButtonContainer, ContentText } from './styles'
 
 export default function Button(props) {
-  const { isLoading, title } = props
+  const { isLoading, title, onPress } = props
 
   function renderContent() {
     if (isLoading) {
@@ -15,12 +15,13 @@ export default function Button(props) {
     return <ContentText>{title}</ContentText>
   }
 
-  return <ButtonContainer>{renderContent()}</ButtonContainer>
+  return <ButtonContainer onPress={onPress}>{renderContent()}</ButtonContainer>
 }
 
 Button.propTypes = {
   isLoading: PropTypes.bool,
   title: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
 }
 
 Button.defaultProps = {

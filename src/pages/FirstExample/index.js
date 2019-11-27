@@ -8,7 +8,12 @@ export default function FirstExample() {
   return (
     <Container>
       <Text>FirstExample</Text>
-      <Button title='MY button' />
+      <Button
+        title='MY button'
+        onPress={() => {
+          console.tron.log('button pressed')
+        }}
+      />
     </Container>
   )
 }
