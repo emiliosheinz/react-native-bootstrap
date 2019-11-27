@@ -7,6 +7,8 @@ import './config/ReactotronConfig'
 import { store, persistor } from './store'
 import Routes from './routes'
 
+import { Toast } from '~/components'
+
 // import { Container } from './styles';
 
 export default function App() {
@@ -14,6 +16,7 @@ export default function App() {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <Routes />
+        <Toast />
       </PersistGate>
     </Provider>
   )
