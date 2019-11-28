@@ -1,11 +1,11 @@
 import ACTION_TYPES from './actionTypes'
 
 export function showToastRequest(params = {}) {
-  const { message, timer } = params
+  const { message } = params
 
   return {
     type: ACTION_TYPES.SHOW_REQUEST,
-    payload: { message, timer },
+    payload: { message },
   }
 }
 
