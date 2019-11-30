@@ -14,16 +14,20 @@ export default function Toast() {
   const { message, show } = useSelector(state => state.toast)
 
   useEffect(() => {
+    const increaseOpacity = Animated.timing(animatedOpacity, {
+      toValue: 1,
+      duration: 500,
+    })
+
+    const descreaseOpacity = Animated.timing(animatedOpacity, {
+      toValue: 0,
+      duration: 500,
+    })
+
     if (show) {
-      Animated.timing(animatedOpacity, {
-        toValue: 1,
-        duration: 1000,
-      }).start(() => {
+      increaseOpacity.start(() => {
         setTimeout(() => {
-          Animated.timing(animatedOpacity, {
-            toValue: 0,
-            duration: 1000,
-          }).start(() => {
+          descreaseOpacity.start(() => {
             dispatch(hideToast())
           })
         }, 2000)
