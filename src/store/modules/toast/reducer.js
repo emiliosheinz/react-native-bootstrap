@@ -8,15 +8,19 @@ const INITIAL_STATE = {
 export default function toast(state = INITIAL_STATE, action) {
   switch (action.type) {
     case ACTION_TYPES.SHOW_SUCCESS:
-    case ACTION_TYPES.SHOW_FAILURE:
+    case ACTION_TYPES.SHOW_FAILURE: {
+      const { message, type } = action.payload
+
       return {
         ...state,
-        message: action.payload.message,
         show: true,
+        message,
+        type,
       }
+    }
     case ACTION_TYPES.HIDE:
       return {
-        ...state,
+        ...INITIAL_STATE,
         show: false,
       }
     default:

@@ -11,7 +11,7 @@ export default function Toast() {
 
   const [animatedOpacity] = useState(new Animated.Value(0))
 
-  const { message, show } = useSelector(state => state.toast)
+  const { message, show, type } = useSelector(state => state.toast)
 
   useEffect(() => {
     const increaseOpacity = Animated.timing(animatedOpacity, {
@@ -39,7 +39,7 @@ export default function Toast() {
   function renderContent() {
     if (show) {
       return (
-        <Container style={{ opacity: animatedOpacity }}>
+        <Container type={type} style={{ opacity: animatedOpacity }}>
           <Text>{message}</Text>
         </Container>
       )

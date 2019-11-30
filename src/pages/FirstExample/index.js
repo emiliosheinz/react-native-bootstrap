@@ -5,6 +5,7 @@ import { Container, Text } from './styles'
 
 import { showToastRequest } from '~/store/modules/toast/actions'
 import { Button } from '~/components'
+import { TOAST_TYPES } from '~/constants'
 
 export default function FirstExample() {
   const dispatch = useDispatch()
@@ -15,7 +16,12 @@ export default function FirstExample() {
       <Button
         title='MY button'
         onPress={() => {
-          dispatch(showToastRequest({ message: 'TESTE' }))
+          dispatch(
+            showToastRequest({
+              message: 'Opsss, parece que algo aconteceu.',
+              type: TOAST_TYPES.SUCCESS,
+            })
+          )
         }}
       />
     </Container>
