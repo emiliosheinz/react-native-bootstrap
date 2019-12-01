@@ -19,10 +19,12 @@ export const Container = styled(Animated.View)`
   padding: 15px 25px;
   border-radius: 50px;
   background-color: ${({ type = TOAST_TYPES.DEFAULT }) => TOAST_COLORS[type]};
+  max-width: 95%;
 `
 
 export const Text = styled.Text`
   color: ${({ type = TOAST_TYPES.DEFAULT }) => getToastTextColor(type)};
   font-size: 16px;
   opacity: 1;
+  text-align: center;
 `
