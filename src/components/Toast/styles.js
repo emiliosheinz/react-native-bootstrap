@@ -5,7 +5,7 @@ import { TOAST_COLORS, TOAST_TYPES } from '~/constants'
 import { COLORS } from '~/styles'
 
 const screenWidth = Dimensions.get('window').width
-const maxToastWidthInPx = `${screenWidth - 20}px`
+const maxToastWidthInPx = `${screenWidth - 40}px`
 
 function getToastTextColor(type) {
   if (type === TOAST_TYPES.WARNING) {
