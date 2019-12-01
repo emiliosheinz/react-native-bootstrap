@@ -1,8 +1,11 @@
-import { Animated } from 'react-native'
+import { Animated, Dimensions } from 'react-native'
 import styled from 'styled-components/native'
 
 import { TOAST_COLORS, TOAST_TYPES } from '~/constants'
 import { COLORS } from '~/styles'
+
+const screenWidth = Dimensions.get('window').width
+const maxToastWidthInPx = `${screenWidth - 20}px`
 
 function getToastTextColor(type) {
   if (type === TOAST_TYPES.WARNING) {
@@ -19,7 +22,7 @@ export const Container = styled(Animated.View)`
   padding: 15px 25px;
   border-radius: 50px;
   background-color: ${({ type = TOAST_TYPES.DEFAULT }) => TOAST_COLORS[type]};
-  max-width: 95%;
+  max-width: ${maxToastWidthInPx};
 `
 
 export const Text = styled.Text`

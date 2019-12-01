@@ -18,8 +18,7 @@ export default function FirstExample() {
         onPress={() => {
           dispatch(
             showToastRequest({
-              message:
-                'Opsss. este é um teste de uma texto muito grande que pode acabar sendo colocado aqui, vamos ver como o componente se comporta com isto.',
+              message: 'Assim que o toast será exibido',
               type: TOAST_TYPES.ERROR,
             })
           )
