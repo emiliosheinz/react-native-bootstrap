@@ -40,7 +40,7 @@ export default function Toast() {
     if (show) {
       return (
         <Container type={type} style={{ opacity: animatedOpacity }}>
-          <Text>{message}</Text>
+          <Text type={type}>{message}</Text>
         </Container>
       )
     }

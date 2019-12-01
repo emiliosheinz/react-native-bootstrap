@@ -18,8 +18,8 @@ export default function FirstExample() {
         onPress={() => {
           dispatch(
             showToastRequest({
-              message: 'Opsss, parece que algo aconteceu.',
-              type: undefined,
+              message: 'Opsss',
+              type: TOAST_TYPES.ERROR,
             })
           )
         }}
