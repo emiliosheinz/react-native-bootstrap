@@ -19,7 +19,7 @@ export default function FirstExample() {
           dispatch(
             showToastRequest({
               message: 'Opsss, parece que algo aconteceu.',
-              type: TOAST_TYPES.SUCCESS,
+              type: undefined,
             })
           )
         }}

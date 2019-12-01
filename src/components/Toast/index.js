@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Text, Animated } from 'react-native'
+import { Animated } from 'react-native'
 
-import { Container } from './styles'
+import { Container, Text } from './styles'
 
 import { hideToast } from '~/store/modules/toast/actions'
 
